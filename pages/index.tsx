@@ -5,6 +5,9 @@ import { Fade } from "react-awesome-reveal";
 import Link from "next/link";
 import Image from "next/image";
 import Investing from "../public/assets/Investing.svg";
+import Section from "../components/Section";
+import FEATURES from "../config/Features";
+import Feature from "../components/Feature";
 
 const Home: NextPage = () => {
   return (
@@ -34,6 +37,26 @@ const Home: NextPage = () => {
             <Fade triggerOnce direction="right">
               <Image src={Investing} alt="Investing" className="z-0" />
             </Fade>
+          </div>
+        </div>
+        <div id="features" className="my-14 md:my-18">
+          <Fade triggerOnce cascade>
+            <Section
+              title="Imagin Features"
+              desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quos quaerat sapiente nam, id vero."
+            />
+          </Fade>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16 my-14">
+            {FEATURES.map(({ feature, link, desc, icon }, index) => (
+              <Fade key={index} direction="up">
+                <Feature
+                  feature={feature}
+                  link={link}
+                  desc={desc}
+                  icon={icon}
+                />
+              </Fade>
+            ))}
           </div>
         </div>
       </Container>
