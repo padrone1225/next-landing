@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactElement, ReactNode } from "react"
 
 export type ContainerProps = {
     children: ReactNode,
@@ -21,4 +21,11 @@ export interface NavLink extends Link {
 
 export interface SubLink extends Link {
     secondSubLinks?: Link[] | null
+}
+
+export type FeatureProps = {
+    feature: string
+    link: string
+    desc: string
+    icon: ReactElement
 }
