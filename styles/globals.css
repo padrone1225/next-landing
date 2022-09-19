@@ -28,7 +28,7 @@
 
 
 @layer components {
-  /* .navBar__link {
+  .navBar__link {
     @apply duration-300 ease-out hover:text-primary
   }
 
@@ -46,7 +46,7 @@
 
   .feature {
     @apply duration-200 ease-out hover:-translate-y-2 hover:bg-primary hover:text-white rounded-md
-  } */
+  }
 
   .link {
     @apply rounded-full p-3 px-6 font-semibold text-white bg-primary block w-fit shadow-2xl shadow-primary

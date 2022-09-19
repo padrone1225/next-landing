@@ -1,5 +1,12 @@
 import { FeatureProps } from "../types/types";
-import { TbRefresh, MdStore, BsHandbagFill } from "../components/Icons";
+import {
+  TbRefresh,
+  MdStore,
+  BsHandbagFill,
+  MdSettingsBackupRestore,
+  FiSmile,
+  FaPlug,
+} from "../components/Icons";
 
 const FEATURES: FeatureProps[] = [
   {
@@ -19,6 +26,24 @@ const FEATURES: FeatureProps[] = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.",
     link: "#",
     icon: <BsHandbagFill />,
+  },
+  {
+    feature: "Free Updates",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.",
+    link: "#",
+    icon: <MdSettingsBackupRestore />,
+  },
+  {
+    feature: "100% Satistified",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.",
+    link: "#",
+    icon: <FiSmile />,
+  },
+  {
+    feature: "Easy Plugin",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.",
+    link: "#",
+    icon: <FaPlug />,
   },
 ];
 

@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image"
 import { ReactElement, ReactNode } from "react"
 
 export type ContainerProps = {
@@ -29,3 +30,13 @@ export type FeatureProps = {
     desc: string
     icon: ReactElement
 }
+
+export type Person = {
+    name: string,
+    job: string,
+    img: StaticImageData | string
+}
+
+export type CardProps = {
+    desc: string
+} & Person
