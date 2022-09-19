@@ -8,6 +8,13 @@ import Investing from "../public/assets/Investing.svg";
 import Section from "../components/Section";
 import FEATURES from "../config/Features";
 import Feature from "../components/Feature";
+import PERSONS from "../config/Persons";
+import FeatureWithImage from "../components/FeatureWithImage";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import Testimonials from "../components/Testimonial";
 
 const Home: NextPage = () => {
   return (
@@ -59,7 +66,44 @@ const Home: NextPage = () => {
             ))}
           </div>
         </div>
+        {PERSONS.map((person, index) => (
+          <FeatureWithImage
+            index={index}
+            key={index}
+            person={{
+              ...person,
+              desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            }}
+          />
+        ))}
       </Container>
+      <div id="testimonials" className="py-14 md:py-18 md:pb-10 bg-gray-100">
+        <Container>
+          <h2 className="text-3xl md:text-4xl capitalize font-bold text-center">
+            Testimonials
+          </h2>
+          <div className="my-6">
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              spaceBetween={50}
+              slidesPerView={1}
+              autoplay={{ delay: 5000 }}
+              pagination={{ clickable: true }}
+            >
+              {PERSONS.map((person, index) => (
+                <SwiperSlide key={index}>
+                  <Testimonials
+                    person={{
+                      ...person,
+                      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                    }}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </Container>
+      </div>
     </div>
   );
 };
