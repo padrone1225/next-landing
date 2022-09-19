@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --blue-primary: 68 132 244;
+  }
+  h1 {
+    @apply text-2xl md:text-3xl font-bold
+  }
+
+  h2 {
+    @apply text-xl md:text-2xl font-semibold
+  }
+
+  h3 {
+    @apply text-lg md:text-xl font-medium
+  }
+
+  input {
+    @apply outline-none
+  }
+}
+
+
+@layer components {
+  .navBar__link {
+    @apply duration-300 ease-out hover:text-primary
+  }
+
+  .input {
+    @apply p-2 border duration-300 ease-in-out hover:border-primary focus:border-primary
+  }
+
+  .label {
+    @apply flex flex-col gap-2 w-full
+  }
+
+  .team__person {
+    @apply group-hover:scale-[1.2] duration-300 ease-out
+  }
+
+  .feature {
+    @apply duration-200 ease-out hover:-translate-y-2 hover:bg-primary hover:text-white rounded-md
+  }
+
+  .link {
+    @apply rounded-full p-3 px-6 font-semibold text-white bg-primary block w-fit shadow-2xl shadow-primary
+  }
+}
+
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
